@@ -50,7 +50,8 @@ namespace PetCapsuleConsole
 
         private bool running = true;
         private List<User> users = new List<User>();
-
+        
+        // =====Pari utility metodia=====
         public static void Info(string msg)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -71,7 +72,9 @@ namespace PetCapsuleConsole
             Console.WriteLine("\nERROR: " + msg);
             Console.ResetColor();
         }
+        //==========
 
+        //=====Tiedoston käsittely=====
         private void readUserData()
         {
             try
@@ -100,14 +103,8 @@ namespace PetCapsuleConsole
             }
         }
 
-        private void clearFile()
-        {
-
-        }
-
         private void saveUserData(List<User> users)
         {
-            // readUserData();
             string output = JsonConvert.SerializeObject(users, Formatting.Indented);
             Info("Writing info: " + output);
 
@@ -115,7 +112,9 @@ namespace PetCapsuleConsole
             outputFile.WriteLine(output);
             outputFile.Close();
         }
+        //==========
 
+        //=====Käyttäjän hallintaa=====
         private bool checkPassword(User u)
         {
             Console.Write("\nEnter password for " + u.Username + ": ");
@@ -159,7 +158,9 @@ namespace PetCapsuleConsole
             users.Add(new User(username, password));
             return true;
         }
+        //==========
 
+        //=====Ohjelman pää-looppi=====
         public void Run()
         {
             //users.Add(new User("Sepi", "pass"));
@@ -171,10 +172,10 @@ namespace PetCapsuleConsole
                 // read-eval-print loop
                 Console.Write("\nPetCapsule> ");
                 string input = Console.ReadLine();
+                //käyttäjän syötteen käsittely
                 switch (input)
                 {
                     
-
                     case "quit":
                         running = false;
                         break;
