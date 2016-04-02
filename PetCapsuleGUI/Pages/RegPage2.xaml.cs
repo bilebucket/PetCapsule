@@ -20,11 +20,21 @@ namespace PetCapsuleGUI
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class RegPage : Page
+    public sealed partial class RegPage2 : Page
     {
-        public RegPage()
+        public RegPage2()
         {
             this.InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RegPage));
+        }
+
+        private void FinishButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
