@@ -98,6 +98,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logic\FileLoader.cs" />
+    <Compile Include="Logic\User.cs" />
     <Compile Include="Pages\CagePage.xaml.cs">
       <DependentUpon>CagePage.xaml</DependentUpon>
     </Compile>
