@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="PetCapsuleGUI.CagePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PetCapsuleGUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
+
+    <Grid Background="#FFFCFAE1">
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
+        <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="VideoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Video Call" Margin="0 20 0 0" FontSize="25"/>
+            <Button x:Name="InfoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Capsule Settings" Margin="0 20 0 0" FontSize="25"/>
+        </StackPanel>
+        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click"/>
+    </Grid>
+</Page>

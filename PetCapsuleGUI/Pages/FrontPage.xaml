@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="PetCapsuleGUI.FrontPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PetCapsuleGUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
+
+    <Grid Background="#FFFCFAE1">
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
+        <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="WelcomeBlock" Text="Welcome {{USERNAME}}" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 90"/>
+            <Button x:Name="CapsulesButton" HorizontalAlignment="Center" Height="50" Width="250" Content="My PetCapsules" Margin="0 20 0 0" FontSize="25" Click="CapsulesButton_Click"/>
+            <Button x:Name="InfoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="My Info" Margin="0 20 0 0" FontSize="25" Click="InfoButton_Click"/>
+            <Button x:Name="LogoutButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Log out" Margin="0 20 0 0" FontSize="25" Click="LogoutButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
