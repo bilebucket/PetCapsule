@@ -20,36 +20,38 @@ namespace PetCapsuleGUI.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CagePage : Page
+    public sealed partial class HumidityPage : Page
     {
-        public CagePage()
+        Logic.Humidity humi = new Logic.Humidity();
+
+        public HumidityPage()
         {
             this.InitializeComponent();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CapsulesPage));
+            this.Frame.Navigate(typeof(CagePage));
         }
 
-        private void TemperatureButton_Click(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(TemperaturePage));
+            humi.CurrentHumidity = float.Parse(HumidityBox.Text);
+            InfoBlock.Text = humi.info;
         }
 
-        private void HumidityButton_Click(object sender, RoutedEventArgs e)
+        private void PHumidity_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(HumidityPage));
+            humi.CurrentHumidity = float.Parse(HumidityBox.Text);
+            humi.CurrentHumidity++;
+            HumidityBox.Text = "" + humi.CurrentHumidity;
         }
 
-        private void VideoButton_Click(object sender, RoutedEventArgs e)
+        private void MHumidity_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(VideoPage));
-        }
-
-        private void StatusButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(StatusPage));
+            humi.CurrentHumidity = float.Parse(HumidityBox.Text);
+            humi.CurrentHumidity--;
+            HumidityBox.Text = "" + humi.CurrentHumidity;
         }
     }
 }
