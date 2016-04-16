@@ -8,16 +8,16 @@
     mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
 
     <Grid Background="#FFFCFAE1">
-        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
-        <TextBlock x:Name="RegisterBlock" Text="Register" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 150 0 0"/>
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
+        <TextBlock x:Name="RegisterBlock" Text="Register" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 150 0 0" Foreground="#FFB9121B" FontWeight="Bold"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 150 0 0">
             <TextBox x:Name="FirstnameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Firstname"/>
             <TextBox x:Name="LastnameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Lastname"/>
             <TextBox x:Name="AddressBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Address"/>
             <TextBox x:Name="LocationBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Location"/>
         </StackPanel>
-        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click"/>
-        <Button x:Name="NextButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="150" Content="Next" Margin="0 0 20 20" FontSize="25" Click="NextButton_Click"/>
+        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+        <Button x:Name="NextButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="150" Content="Next" Margin="0 0 20 20" FontSize="25" Click="NextButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
 
     </Grid>
 </Page>

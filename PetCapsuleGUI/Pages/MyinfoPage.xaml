@@ -8,16 +8,16 @@
     mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
 
     <Grid Background="#FFFCFAE1">
-        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
         <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="UsernameBlock" Text="USERNAME HERE" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 10"/>
+            <TextBlock x:Name="UsernameBlock" Text="USERNAME HERE" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 10" Foreground="#FFB9121B" FontStyle="Italic" FontWeight="Bold"/>
             <TextBox x:Name="NameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="FIRSTNAME HERE" IsReadOnly="True" />
             <TextBox x:Name="LastnameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="LASTNAME HERE" IsReadOnly="True" />
             <TextBox x:Name="EmailBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="EMAIL HERE" IsReadOnly="True" />
             <TextBox x:Name="AddressBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="ADDRESS HERE" IsReadOnly="True" />
             <TextBox x:Name="LocationBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="LOCATION HERE" IsReadOnly="True" />
-            <Button x:Name="EditButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Edit info" Margin="0 0 0 20" FontSize="25" Click="EditButton_Click"/>
+            <Button x:Name="EditButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Edit info" Margin="0 0 0 20" FontSize="25" Click="EditButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
         </StackPanel>
-        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="0 0 0 20" FontSize="25" Click="BackButton_Click"/>
+        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="0 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
     </Grid>
 </Page>

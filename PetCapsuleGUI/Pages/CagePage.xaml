@@ -8,14 +8,14 @@
     mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
 
     <Grid Background="#FFFCFAE1">
-        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
         <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="VideoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Video Call" Margin="0 20 0 0" FontSize="25" Click="VideoButton_Click"/>
+            <Button x:Name="VideoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Video Call" Margin="0 20 0 0" FontSize="25" Click="VideoButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
             
-            <Button x:Name="TemperatureButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Temperature" Margin="0 20 0 0" FontSize="25" Click="TemperatureButton_Click"/>
-            <Button x:Name="HumidityButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Humidity" Margin="0 20 0 0" FontSize="25" Click="HumidityButton_Click"/>
-            <Button x:Name="StatusButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Status" Margin="0 20 0 0" FontSize="25" Click="StatusButton_Click"/>
+            <Button x:Name="TemperatureButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Temperature" Margin="0 20 0 0" FontSize="25" Click="TemperatureButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+            <Button x:Name="HumidityButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Humidity" Margin="0 20 0 0" FontSize="25" Click="HumidityButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+            <Button x:Name="StatusButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Status" Margin="0 20 0 0" FontSize="25" Click="StatusButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
         </StackPanel>
-        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click"/>
+        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Foreground="#FFFCFAE1" Background="#FFB9121B"/>
     </Grid>
 </Page>

@@ -8,16 +8,16 @@
     mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
 
     <Grid Background="#FFFCFAE1">
-        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
-        <TextBlock x:Name="RegisterBlock" Text="Register" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 150 0 0"/>
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
+        <TextBlock x:Name="RegisterBlock" Text="Register" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 150 0 0" Foreground="#FFB9121B" FontWeight="Bold"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 150 0 0">
             <TextBox x:Name="UsernameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Enter Username"/>
             <PasswordBox x:Name="PasswordBox" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" Margin="0 0 0 20" PlaceholderText="Enter password"/>
             <PasswordBox x:Name="Password2Box" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" Margin="0 0 0 20" PlaceholderText="Repeat password"/>
             <TextBox x:Name="EmailBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Enter email"/>
-            <CheckBox x:Name="TOCBox" Content="I accept terms and conditions"/>
+            <CheckBox x:Name="TOCBox" Content="I accept terms and conditions" Foreground="#FFB9121B"/>
         </StackPanel>
-        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click"/>
-        <Button x:Name="FinishButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="150" Content="Finish" Margin="0 0 20 20" FontSize="25" Click="FinishButton_Click"/>
+        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Foreground="#FFFCFAE1" Background="#FFB9121B"/>
+        <Button x:Name="FinishButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="50" Width="150" Content="Finish" Margin="0 0 20 20" FontSize="25" Click="FinishButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
     </Grid>
 </Page>

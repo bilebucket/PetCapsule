@@ -8,11 +8,11 @@
      mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
 
     <Grid Background="#FFFCFAE1">
-        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
-        <TextBlock x:Name="VideoBlock" Text="Video" FontFamily="Trebuchet MS" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-20,106,-21,0"/>
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
+        <TextBlock x:Name="VideoBlock" Text="Video" FontFamily="Trebuchet MS" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-20,106,-21,0" Foreground="#FFB9121B" FontWeight="Bold"/>
 
-        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click"/>
-        <MediaTransportControls HorizontalAlignment="Left" Margin="36,392,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+        <MediaTransportControls HorizontalAlignment="Left" Margin="36,392,0,0" VerticalAlignment="Top" Foreground="#FFB9121B"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="178" Margin="36,209,0,0" VerticalAlignment="Top" Width="288" />
 
     </Grid>

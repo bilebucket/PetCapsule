@@ -8,15 +8,15 @@
      mc:Ignorable="d" FontFamily="Trebuchet MS" Background="#FFFCFAE1">
 
     <Grid Background="#FFFCFAE1">
-        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0"/>
-        <TextBlock x:Name="TemperatureBlock" Text="Temperature" FontFamily="Trebuchet MS" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-20,106,-21,0"/>
+        <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
+        <TextBlock x:Name="TemperatureBlock" Text="Temperature" FontFamily="Trebuchet MS" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-20,106,-21,0" Foreground="#FFB9121B" FontWeight="Bold"/>
         <RelativePanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="100">
             <TextBox x:Name="TemperatureBox" IsReadOnly="True" Height="50" Width="150" TextAlignment="Center" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" Text="10"/>
-            <Button x:Name="PTemperature" Content="+" RelativePanel.RightOf="TemperatureBox" Width="50" Height="50" Margin="25,25,0,-25" Click="PTemperature_Click"/>
-            <Button x:Name="MTemperature" Content="-" RelativePanel.LeftOf="TemperatureBox" Width="50" Height="50" Margin="25, 25, 25, -25" Click="MTemperature_Click"/>
+            <Button x:Name="PTemperature" Content="+" RelativePanel.RightOf="TemperatureBox" Width="50" Height="50" Margin="25,25,0,-25" Click="PTemperature_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+            <Button x:Name="MTemperature" Content="-" RelativePanel.LeftOf="TemperatureBox" Width="50" Height="50" Margin="25, 25, 25, -25" Click="MTemperature_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
         </RelativePanel>
         <TextBlock x:Name="InfoBlock" Text="" Width="200" Height="40" Margin="105,140,105,10" TextAlignment="Center" HorizontalAlignment="Center"/>
-        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="105,0,105,10" FontSize="25" Click="BackButton_Click" />
-        <Button x:Name="SaveButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Save" Margin="105,0,105,150" FontSize="25" Click="SaveButton_Click" />
+        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="105,0,105,10" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1" />
+        <Button x:Name="SaveButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Save" Margin="105,0,105,150" FontSize="25" Click="SaveButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1" />
     </Grid>
 </Page>
