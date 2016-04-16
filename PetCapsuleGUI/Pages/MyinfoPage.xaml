@@ -10,7 +10,7 @@
     <Grid Background="#FFFCFAE1">
         <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
         <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="UsernameBlock" Text="USERNAME HERE" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 10" Foreground="#FFB9121B" FontStyle="Italic" FontWeight="Bold"/>
+            <TextBlock x:Name="UsernameBlock" Text="USERNAME HERE" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 10" Foreground="#FFB9121B" FontWeight="Bold"/>
             <TextBox x:Name="NameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="FIRSTNAME HERE" IsReadOnly="True" />
             <TextBox x:Name="LastnameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="LASTNAME HERE" IsReadOnly="True" />
             <TextBox x:Name="EmailBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="EMAIL HERE" IsReadOnly="True" />
