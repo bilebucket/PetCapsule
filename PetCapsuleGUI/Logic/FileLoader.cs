@@ -11,7 +11,8 @@ namespace PetCapsuleGUI.Logic
     class FileLoader
     {
         private string filename;
-        private List<User> users;
+        private List<User> users = new List<User>();
+       
 
         public List<User> Users
         {
@@ -24,7 +25,7 @@ namespace PetCapsuleGUI.Logic
         }
 
 
-        private void readUserData()
+        public void readUserData()
         {
             try
             {
@@ -40,6 +41,12 @@ namespace PetCapsuleGUI.Logic
 
             }
             catch (FileNotFoundException e) { }
+        }
+
+        public void writeUserData()
+        {
+            string output = JsonConvert.SerializeObject(users, Formatting.Indented);
+            File.WriteAllText(filename, output);
         }
     }
 }

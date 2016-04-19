@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using PetCapsuleGUI.Logic;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,9 @@ namespace PetCapsuleGUI.Pages
         public MainPage()
         {
             this.InitializeComponent();
+            FileLoader x = new FileLoader(@"users.json");
+            x.writeUserData();
+            x.readUserData();
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
