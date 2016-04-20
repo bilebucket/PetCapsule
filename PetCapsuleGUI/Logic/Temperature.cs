@@ -11,7 +11,7 @@ namespace PetCapsuleGUI.Logic
         public string info = "";
         private float minTemperature = 10;
         private float maxTemperature = 25;
-        private float temperature;
+        private float temperature = 20;
         public float CurrentTemperature
         {
             get

@@ -29,9 +29,15 @@ namespace PetCapsuleGUI.Pages
 
 
             User u = new User("x", "y", "x@y.com", "Matti", "Meikalainen", "Meikalaisensaijufds", "Turku");
-            //Temperature t = new Temperature
-
+            User u2 = new User("z", "yh", " ", "Pekka", "X", " ", " ");
+            Temperature t = new Temperature();
+            Humidity h = new Humidity();
+            Cage c = new Cage(h, t);
+            Pet p = new Pet("Musti", "Kissa", "Siam");
+            c.Pet = p;
+            u.addCage(c);
             UserContainer uc = new UserContainer(u);
+            UserContainer.addUser(u2);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -39,7 +45,7 @@ namespace PetCapsuleGUI.Pages
             string u = UsernameBox.Text;
             string p = PasswordBox.Password;
 
-            if (UserContainer.user.Username == u && UserContainer.user.Password == p)
+            if (UserContainer.loginCheck(u, p))
             {
                 this.Frame.Navigate(typeof(FrontPage));
             }

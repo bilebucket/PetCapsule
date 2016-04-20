@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,11 +23,12 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class TemperaturePage : Page
     {
-        Logic.Temperature temp = new Logic.Temperature();
+        Logic.Temperature temp = UserContainer.user.getCages()[0].Temperature;
         
         public TemperaturePage()
         {            
             this.InitializeComponent();
+            TemperatureBox.Text = "" + temp.CurrentTemperature;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,7 @@ namespace PetCapsuleGUI.Pages
         {
             temp.CurrentTemperature = float.Parse(TemperatureBox.Text);
             InfoBlock.Text = temp.info;
+            UserContainer.user.getCages()[0].Temperature.CurrentTemperature = temp.CurrentTemperature;
         }
 
         private void PTemperature_Click(object sender, RoutedEventArgs e)

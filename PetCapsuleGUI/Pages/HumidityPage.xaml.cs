@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,11 +23,12 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class HumidityPage : Page
     {
-        Logic.Humidity humi = new Logic.Humidity();
+        Logic.Humidity humi = UserContainer.user.getCages()[0].Humidity;
 
         public HumidityPage()
         {
             this.InitializeComponent();
+            HumidityBox.Text = "" + humi.CurrentHumidity;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,7 @@ namespace PetCapsuleGUI.Pages
         {
             humi.CurrentHumidity = float.Parse(HumidityBox.Text);
             InfoBlock.Text = humi.info;
+            UserContainer.user.getCages()[0].Humidity.CurrentHumidity = humi.CurrentHumidity;
         }
 
         private void PHumidity_Click(object sender, RoutedEventArgs e)

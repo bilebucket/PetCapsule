@@ -11,7 +11,7 @@ namespace PetCapsuleGUI.Logic
         public string info = "";
         private float minHumidity = 50;
         private float maxHumidity = 100;
-        private float humidity;
+        private float humidity = 60;
         public float CurrentHumidity
         {
             get
