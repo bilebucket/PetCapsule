@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,19 @@ namespace PetCapsuleGUI.Pages
         public CapsulesPage()
         {
             this.InitializeComponent();
+
+            List<Button> btns = new List<Button>();
+            int count = 1;
+            foreach (Cage c in UserContainer.user.getCages())
+            {
+                Button b = new Button();
+                b.Content = "Capsule " + count;
+                btns.Add(b);
+                count++;
+            }
+
+            CapsulesScroll.ItemsSource = btns;
+
         }
 
         private void CapsuleButton1_Click(object sender, RoutedEventArgs e)
