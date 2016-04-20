@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,6 +24,9 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class CapsulesPage : Page
     {
+
+        public EventHandler cageClick;
+
         public CapsulesPage()
         {
             this.InitializeComponent();
@@ -33,11 +37,24 @@ namespace PetCapsuleGUI.Pages
             {
                 Button b = new Button();
                 b.Content = "Capsule " + count;
+                b.FontSize = 25;
+                b.Height = 50;
+                b.Width = 200;
+                b.Background = new SolidColorBrush(Color.FromArgb(255, 185, 18, 27));
+                b.Foreground = new SolidColorBrush(Color.FromArgb(255, 252, 250, 225));
+                // b.Click += cageClick;
+                //b.Margin = ;
                 btns.Add(b);
                 count++;
             }
 
             CapsulesScroll.ItemsSource = btns;
+
+        }
+
+        
+        private void HandlecageClick(object sender, System.EventArgs e)
+        {
 
         }
 

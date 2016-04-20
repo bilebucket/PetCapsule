@@ -22,9 +22,18 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class CagePage : Page
     {
+        private int cageID;
+
         public CagePage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            var parameters = e.Parameter;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

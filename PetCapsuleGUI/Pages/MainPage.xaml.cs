@@ -33,9 +33,11 @@ namespace PetCapsuleGUI.Pages
             Temperature t = new Temperature();
             Humidity h = new Humidity();
             Cage c = new Cage(h, t);
+            Cage c2 = new Cage(h, t);
             Pet p = new Pet("Musti", "Kissa", "Siam");
             c.Pet = p;
             u.addCage(c);
+            u.addCage(c2);
             UserContainer uc = new UserContainer(u);
             UserContainer.addUser(u2);
         }
