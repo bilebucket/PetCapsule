@@ -28,8 +28,8 @@ namespace PetCapsuleGUI.Pages
             this.InitializeComponent();
 
 
-            User u = new User("testi", "pass", "testi@jotain.com", "Matti", "Meikalainen", "Meikalaisensaijufds", "Turku");
-               
+            User u = new User("x", "y", "x@y.com", "Matti", "Meikalainen", "Meikalaisensaijufds", "Turku");
+            //Temperature t = new Temperature
 
             UserContainer uc = new UserContainer(u);
         }

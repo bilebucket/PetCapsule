@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,15 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class ForgotpasswordPage : Page
     {
+
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var random = new Random();
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
         public ForgotpasswordPage()
         {
             this.InitializeComponent();
@@ -35,6 +45,16 @@ namespace PetCapsuleGUI.Pages
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void ResetPassword_Click(object sender, RoutedEventArgs e)
+        {
+            if (UsernameBox.Text == UserContainer.user.Username && EmailBox.Text == UserContainer.user.Email)
+            {
+                string pass = RandomString(8);
+                NewPassword.Text = pass;
+                UserContainer.user = new User(UserContainer.user.Username, pass, UserContainer.user.Email, UserContainer.user.Firstname, UserContainer.user.Lastname, UserContainer.user.Address, UserContainer.user.City);
+            }
         }
     }
 }
