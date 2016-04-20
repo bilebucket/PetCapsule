@@ -71,6 +71,14 @@ namespace PetCapsuleGUI.Logic
             City = city;
         }
 
+        public User(string firstname, string lastname, string address, string city)
+        {
+            Firstname = firstname;
+            Lastname = lastname;
+            Address = address;
+            City = city;
+        }
+
         public void addCage(Cage c)
         {
             cages.Add(c);
