@@ -10,7 +10,7 @@
     <Grid Background="#FFFCFAE1">
         <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
         <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:Name="WelcomeBlock" Text="Welcome {{USERNAME}}" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 90" Foreground="#FFB9121B" FontWeight="Bold"/>
+            <TextBlock x:Name="WelcomeBlock" Text="Welcome {{USERNAME}}" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 90" Foreground="#FFB9121B" FontWeight="Bold" SelectionChanged="WelcomeBlock_SelectionChanged"/>
             <Button x:Name="CapsulesButton" HorizontalAlignment="Center" Height="50" Width="250" Content="My PetCapsules" Margin="0 20 0 0" FontSize="25" Click="CapsulesButton_Click" Foreground="#FFFCFAE1" Background="#FFB9121B"/>
             <Button x:Name="InfoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="My Info" Margin="0 20 0 0" FontSize="25" Click="InfoButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
             <Button x:Name="LogoutButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Log out" Margin="0 20 0 0" FontSize="25" Click="LogoutButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>

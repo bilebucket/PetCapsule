@@ -26,14 +26,24 @@ namespace PetCapsuleGUI.Pages
         public MainPage()
         {
             this.InitializeComponent();
-            FileLoader x = new FileLoader(@"users.json");
-            x.writeUserData();
-            x.readUserData();
+
+
+            User u = new User("testi", "pass", "testi@jotain.com", "Matti", "Meikalainen", "Meikalaisensaijufds", "Turku");
+               
+
+            UserContainer uc = new UserContainer(u);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FrontPage));
+            string u = UsernameBox.Text;
+            string p = PasswordBox.Password;
+
+            if (UserContainer.user.Username == u && UserContainer.user.Password == p)
+            {
+                this.Frame.Navigate(typeof(FrontPage));
+            }
+
         }
 
         private void RegButton_Click(object sender, RoutedEventArgs e)

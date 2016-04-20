@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace PetCapsuleGUI.Pages
         public FrontPage()
         {
             this.InitializeComponent();
+            WelcomeBlock.Text = "Welcome " + UserContainer.user.Username;
         }
 
         private void CapsulesButton_Click(object sender, RoutedEventArgs e)
@@ -40,6 +42,11 @@ namespace PetCapsuleGUI.Pages
         private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MyinfoPage));
+        }
+
+        private void WelcomeBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

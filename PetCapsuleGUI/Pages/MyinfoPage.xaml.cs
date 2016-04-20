@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,18 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class MyinfoPage : Page
     {
+
+        private bool edit = false;
+
         public MyinfoPage()
         {
             this.InitializeComponent();
+            NameBox.Text = UserContainer.user.Firstname;
+            LastnameBox.Text = UserContainer.user.Lastname;
+            EmailBox.Text = UserContainer.user.Email;
+            AddressBox.Text = UserContainer.user.Address;
+            CityBox.Text = UserContainer.user.City;
+            UsernameBlock.Text = UserContainer.user.Username;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -34,11 +44,19 @@ namespace PetCapsuleGUI.Pages
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            NameBox.IsReadOnly = false;
-            LastnameBox.IsReadOnly = false;
-            EmailBox.IsReadOnly = false;
-            AddressBox.IsReadOnly = false;
-            LocationBox.IsReadOnly = false;
+           if (!edit)
+            {
+                NameBox.IsReadOnly = false;
+                LastnameBox.IsReadOnly = false;
+                EmailBox.IsReadOnly = false;
+                AddressBox.IsReadOnly = false;
+                CityBox.IsReadOnly = false;
+                edit = true;
+                EditButton.Content = "Save";
+            } else
+            {
+                UserContainer.user = new User(UserContainer.user.Username, UserContainer.user.Password, EmailBox.Text, NameBox.Text, LastnameBox.Text, AddressBox.Text, CityBox.Text);
+            }
         }
     }
 }

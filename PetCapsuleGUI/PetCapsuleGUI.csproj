@@ -28,6 +28,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -98,10 +99,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Cage.cs" />
     <Compile Include="Logic\FileLoader.cs" />
     <Compile Include="Logic\Humidity.cs" />
+    <Compile Include="Logic\Pet.cs" />
     <Compile Include="Logic\Temperature.cs" />
     <Compile Include="Logic\User.cs" />
+    <Compile Include="Logic\UserContainer.cs" />
     <Compile Include="Pages\CagePage.xaml.cs">
       <DependentUpon>CagePage.xaml</DependentUpon>
     </Compile>
