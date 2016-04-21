@@ -55,7 +55,14 @@ namespace PetCapsuleGUI.Pages
                 EditButton.Content = "Save";
             } else
             {
-                UserContainer.user = new User(UserContainer.user.Username, UserContainer.user.Password, EmailBox.Text, NameBox.Text, LastnameBox.Text, AddressBox.Text, CityBox.Text);
+                User oldUser = UserContainer.user;
+
+
+
+                User newUser = new User(UserContainer.user.Username, UserContainer.user.Password, EmailBox.Text, NameBox.Text, LastnameBox.Text, AddressBox.Text, CityBox.Text);
+                UserContainer.replaceUser(oldUser, newUser);
+                FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
+                c.writeUserData();
             }
         }
     }

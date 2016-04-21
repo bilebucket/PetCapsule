@@ -71,6 +71,8 @@ namespace PetCapsuleGUI.Logic
             City = city;
         }
 
+        public User() { }
+
         public User(string firstname, string lastname, string address, string city)
         {
             Firstname = firstname;

@@ -30,7 +30,9 @@ namespace PetCapsuleGUI.Pages
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
+            FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
             getData();
+            c.writeUserData();
             this.Frame.Navigate(typeof(RegPage2));
         }
 

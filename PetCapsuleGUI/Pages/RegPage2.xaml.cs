@@ -39,9 +39,9 @@ namespace PetCapsuleGUI.Pages
             {
                 if ((bool)TOCBox.IsChecked)
                 {
-                    //FileLoader c = new FileLoader(@"users.json");
+                    FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
                     getData();
-                    //c.writeUserData();
+                    c.writeUserData();
                     this.Frame.Navigate(typeof(MainPage));
                 }
             }

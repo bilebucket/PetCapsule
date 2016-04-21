@@ -27,19 +27,23 @@ namespace PetCapsuleGUI.Pages
         {
             this.InitializeComponent();
 
+            FileLoader fl = new FileLoader(@"assets/users.json", UserContainer.Users);
+            fl.readUserData();
+            UserContainer uc = new UserContainer();
+            UserContainer.Users = fl.Users;
+            /* User u = new User("x", "y", "x@y.com", "Matti", "Meikalainen", "Meikalaisensaijufds", "Turku");
+             User u2 = new User("z", "yh", " ", "Pekka", "X", " ", " ");
+             Temperature t = new Temperature();
+             Humidity h = new Humidity();
+             Cage c = new Cage(h, t);
+             Cage c2 = new Cage(h, t);
+             Pet p = new Pet("Musti", "Kissa", "Siam");
+             c.Pet = p;
+             u.addCage(c);
+             u.addCage(c2);
+             */
 
-            User u = new User("x", "y", "x@y.com", "Matti", "Meikalainen", "Meikalaisensaijufds", "Turku");
-            User u2 = new User("z", "yh", " ", "Pekka", "X", " ", " ");
-            Temperature t = new Temperature();
-            Humidity h = new Humidity();
-            Cage c = new Cage(h, t);
-            Cage c2 = new Cage(h, t);
-            Pet p = new Pet("Musti", "Kissa", "Siam");
-            c.Pet = p;
-            u.addCage(c);
-            u.addCage(c2);
-            UserContainer uc = new UserContainer(u);
-            UserContainer.addUser(u2);
+            //UserContainer.addUser(u2);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)

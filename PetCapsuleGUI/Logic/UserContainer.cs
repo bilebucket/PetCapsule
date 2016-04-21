@@ -17,9 +17,50 @@ namespace PetCapsuleGUI.Logic
             users.Add(u);
         }
 
+        public User User
+        {
+            get { return user; }
+            set {
+                user = value;
+                users.Add(user);         
+                }
+        }
+
+        public UserContainer()
+        {
+        }
+
+        public static User getUserByEmailAndUsername(string username, string email)
+        {
+            foreach (User u in users)
+            {
+                if (u.Username == username && u.Email == email)
+                {
+                    return u;
+                }
+            }
+            return null;
+        }
+
+        static public void replaceUser(User oldUser, User newUser)
+        {
+            users.Remove(oldUser);
+            users.Add(newUser);
+        }
+
+        static public List<User> Users
+        {
+            get {
+                //users.Add(user);
+                return users;
+            }
+            set { users = value; }
+        }
+
         public static void addUser(User u)
         {
             users.Add(u);
+            user = u;
         }
 
         public static bool loginCheck(string username, string password)

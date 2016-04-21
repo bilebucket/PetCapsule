@@ -16,6 +16,8 @@
             <TextBox x:Name="EmailBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="EMAIL HERE" IsReadOnly="True" />
             <TextBox x:Name="AddressBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="ADDRESS HERE" IsReadOnly="True" />
             <TextBox x:Name="CityBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="LOCATION HERE" IsReadOnly="True" />
+            <PasswordBox x:Name="PasswordOldBox" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" Margin="0 0 0 20" PlaceholderText="PASSWORD"/>
+            <PasswordBox x:Name="PasswordNewBox" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" Margin="0 0 0 20" PlaceholderText="PASSWORD"/>
             <Button x:Name="EditButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Edit info" Margin="0 0 0 20" FontSize="25" Click="EditButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
         </StackPanel>
         <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="0 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>

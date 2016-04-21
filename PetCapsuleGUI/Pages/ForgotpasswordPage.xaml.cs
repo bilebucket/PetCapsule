@@ -49,11 +49,21 @@ namespace PetCapsuleGUI.Pages
 
         private void ResetPassword_Click(object sender, RoutedEventArgs e)
         {
-            if (UsernameBox.Text == UserContainer.user.Username && EmailBox.Text == UserContainer.user.Email)
+            User user = UserContainer.getUserByEmailAndUsername(UsernameBox.Text, EmailBox.Text);
+            if (user != null)
             {
-                string pass = RandomString(8);
-                NewPassword.Text = pass;
-                UserContainer.user = new User(UserContainer.user.Username, pass, UserContainer.user.Email, UserContainer.user.Firstname, UserContainer.user.Lastname, UserContainer.user.Address, UserContainer.user.City);
+                if (UsernameBox.Text == user.Username && EmailBox.Text == user.Email)
+                {
+                    string pass = RandomString(8);
+                    NewPassword.Text = pass;
+
+                    User oldUser = user;
+                    User newUser = new User(user.Username, pass, user.Email, user.Firstname, user.Lastname, user.Address, user.City);
+
+                    UserContainer.replaceUser(oldUser, newUser);
+                    FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
+                    c.writeUserData();
+                }
             }
         }
     }
