@@ -34,6 +34,8 @@ namespace PetCapsuleGUI.Pages
             base.OnNavigatedTo(e);
 
             var parameters = e.Parameter;
+            cageID = int.Parse(e.Parameter.ToString());
+            HeaderBlock.Text = "Capsule #" + (cageID + 1);
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -43,22 +45,22 @@ namespace PetCapsuleGUI.Pages
 
         private void TemperatureButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(TemperaturePage));
+            this.Frame.Navigate(typeof(TemperaturePage), cageID);
         }
 
         private void HumidityButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(HumidityPage));
+            this.Frame.Navigate(typeof(HumidityPage), cageID);
         }
 
         private void VideoButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(VideoPage));
+            this.Frame.Navigate(typeof(VideoPage), cageID);
         }
 
         private void StatusButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(StatusPage));
+            this.Frame.Navigate(typeof(StatusPage), cageID);
         }
     }
 }

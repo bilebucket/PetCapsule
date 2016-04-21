@@ -25,7 +25,7 @@ namespace PetCapsuleGUI.Pages
     public sealed partial class CapsulesPage : Page
     {
 
-        public EventHandler cageClick;
+        //public EventHandler b_Click;
 
         public CapsulesPage()
         {
@@ -42,7 +42,7 @@ namespace PetCapsuleGUI.Pages
                 b.Width = 200;
                 b.Background = new SolidColorBrush(Color.FromArgb(255, 185, 18, 27));
                 b.Foreground = new SolidColorBrush(Color.FromArgb(255, 252, 250, 225));
-                // b.Click += cageClick;
+                b.Click += new RoutedEventHandler(b_Click);
                 //b.Margin = ;
                 btns.Add(b);
                 count++;
@@ -53,9 +53,13 @@ namespace PetCapsuleGUI.Pages
         }
 
         
-        private void HandlecageClick(object sender, System.EventArgs e)
+        private void b_Click(object sender, RoutedEventArgs e)
         {
-
+            var parameters = "";
+            Button b = (Button)sender;
+            parameters += b.Content;
+            parameters = parameters.Split(' ')[1];
+            Frame.Navigate(typeof(CagePage), int.Parse(parameters) - 1);
         }
 
         private void CapsuleButton1_Click(object sender, RoutedEventArgs e)

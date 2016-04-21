@@ -23,24 +23,35 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class HumidityPage : Page
     {
-        Logic.Humidity humi = UserContainer.user.getCages()[0].Humidity;
+        Logic.Humidity humi;
+        private int cageID;
 
         public HumidityPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            var parameters = e.Parameter;
+            cageID = int.Parse(e.Parameter.ToString());
+            // HeaderBlock.Text = "Capsule #" + cageID;
+            humi = UserContainer.user.getCages()[cageID].Humidity;
             HumidityBox.Text = "" + humi.CurrentHumidity;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CagePage));
+            this.Frame.Navigate(typeof(CagePage), cageID);
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             humi.CurrentHumidity = float.Parse(HumidityBox.Text);
             InfoBlock.Text = humi.info;
-            UserContainer.user.getCages()[0].Humidity.CurrentHumidity = humi.CurrentHumidity;
+            UserContainer.user.getCages()[cageID].Humidity.CurrentHumidity = humi.CurrentHumidity;
         }
 
         private void PHumidity_Click(object sender, RoutedEventArgs e)
