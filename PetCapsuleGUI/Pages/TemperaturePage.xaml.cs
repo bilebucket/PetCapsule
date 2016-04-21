@@ -52,6 +52,8 @@ namespace PetCapsuleGUI.Pages
             temp.CurrentTemperature = float.Parse(TemperatureBox.Text);
             InfoBlock.Text = temp.info;
             UserContainer.user.getCage(cageID).CageTemperature.CurrentTemperature = temp.CurrentTemperature;
+
+            UserContainer.replaceUserInfo();
         }
 
         private void PTemperature_Click(object sender, RoutedEventArgs e)

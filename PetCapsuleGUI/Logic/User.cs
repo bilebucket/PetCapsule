@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,22 +7,37 @@ using System.Threading.Tasks;
 
 namespace PetCapsuleGUI.Logic
 {
+    [JsonObject(MemberSerialization.OptIn)]
     class User
     {
+        [JsonProperty]
         private string username;
+        [JsonProperty]
         private string password;
+        [JsonProperty]
         private string email;
+        [JsonProperty]
         private string firstname;
+        [JsonProperty]
         private string lastname;
+        [JsonProperty]
         private string address;
+        [JsonProperty]
         private string city;
 
+        [JsonProperty]
         private List<Cage> cages = new List<Cage>(); 
 
         public string Username
         {
             get { return username; }
             set { username = value; }
+        }
+
+        public List<Cage> Cages
+        {
+            get { return cages; }
+            set { cages = value; }
         }
 
         public string Password

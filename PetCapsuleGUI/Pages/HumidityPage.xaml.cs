@@ -52,6 +52,8 @@ namespace PetCapsuleGUI.Pages
             humi.CurrentHumidity = float.Parse(HumidityBox.Text);
             InfoBlock.Text = humi.info;
             UserContainer.user.getCage(cageID).CageHumidity.CurrentHumidity = humi.CurrentHumidity;
+
+            UserContainer.replaceUserInfo();
         }
 
         private void PHumidity_Click(object sender, RoutedEventArgs e)

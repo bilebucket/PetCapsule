@@ -37,12 +37,15 @@ namespace PetCapsuleGUI.Pages
         {
             if (PasswordBox.Password == Password2Box.Password)
             {
-                if ((bool)TOCBox.IsChecked)
-                {
-                    FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
-                    getData();
-                    c.writeUserData();
-                    this.Frame.Navigate(typeof(MainPage));
+                if (UserContainer.usernameAvailable(UsernameBox.Text) && UserContainer.emailAvailable(EmailBox.Text))
+                {                    
+                    if ((bool)TOCBox.IsChecked)
+                    {
+                        FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
+                        getData();
+                        c.writeUserData();
+                        this.Frame.Navigate(typeof(MainPage));
+                    }
                 }
             }
         }

@@ -30,7 +30,11 @@ namespace PetCapsuleGUI.Pages
         public CapsulesPage()
         {
             this.InitializeComponent();
+            createButtons();
+        }
 
+        private void createButtons()
+        {
             List<Button> btns = new List<Button>();
             int count = 1;
             foreach (Cage c in UserContainer.user.getCages())
@@ -49,10 +53,18 @@ namespace PetCapsuleGUI.Pages
             }
 
             CapsulesScroll.ItemsSource = btns;
-
         }
 
-        
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserContainer.user.addCage(new Cage(new Humidity(), new Temperature()));
+
+            UserContainer.replaceUserInfo();
+
+            createButtons();
+        }
+
+
         private void b_Click(object sender, RoutedEventArgs e)
         {
             var parameters = "";

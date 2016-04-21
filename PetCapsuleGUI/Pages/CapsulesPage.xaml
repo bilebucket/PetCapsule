@@ -11,10 +11,11 @@
         <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
         <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="WelcomeBlock" Text="My PetCapsules" FontFamily="Trebuchet MS" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 90" Foreground="#FFB9121B" FontWeight="Bold"/>
-            <ListView x:Name="CapsulesScroll" MaxHeight="300">
+            <ListView x:Name="CapsulesScroll" MaxHeight="300" Margin="0 0 0 20">
                 
             </ListView>
+            <Button x:Name="AddButton" HorizontalAlignment="Center" Height="50" Width="200" Content="Add" Margin="0 0 0 20" FontSize="25" Click="AddButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
         </StackPanel>
-        <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+        <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
     </Grid>
 </Page>

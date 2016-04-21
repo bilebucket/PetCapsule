@@ -46,6 +46,7 @@ namespace PetCapsuleGUI.Logic
         {
             users.Remove(oldUser);
             users.Add(newUser);
+            user = newUser;
         }
 
         static public List<User> Users
@@ -82,6 +83,36 @@ namespace PetCapsuleGUI.Logic
                 }               
             }
             return false;
+        }
+
+        public static void replaceUserInfo()
+        {
+            User oldUser = UserContainer.user;
+
+            User newUser = new User(oldUser.Username, oldUser.Password, oldUser.Email, oldUser.Firstname, oldUser.Lastname, oldUser.Address, oldUser.City);
+            newUser.Cages = oldUser.Cages;
+
+            UserContainer.replaceUser(oldUser, newUser);
+            FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
+            c.writeUserData();
+        }
+
+        public static bool usernameAvailable(string username)
+        {
+            foreach(User u in users)
+            {
+                if (u.Username == username) return false;
+            }
+            return true;
+        }
+
+        public static bool emailAvailable(string email)
+        {   
+            foreach(User u in users)
+            {
+                if (u.Email == email) return false;
+            }
+            return true;
         }
     }
 }
