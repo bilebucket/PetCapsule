@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,7 +35,23 @@ namespace PetCapsuleGUI.Pages
 
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            if (PasswordBox.Password == Password2Box.Password)
+            {
+                if ((bool)TOCBox.IsChecked)
+                {
+                    //FileLoader c = new FileLoader(@"users.json");
+                    getData();
+                    //c.writeUserData();
+                    this.Frame.Navigate(typeof(MainPage));
+                }
+            }
+        }
+
+        public void getData()
+        {
+            UserContainer.user.Username = UsernameBox.Text;
+            UserContainer.user.Password = PasswordBox.Password;
+            UserContainer.user.Email = EmailBox.Text;
         }
     }
 }

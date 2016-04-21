@@ -38,7 +38,7 @@ namespace PetCapsuleGUI.Pages
             var parameters = e.Parameter;
             cageID = int.Parse(e.Parameter.ToString());
             // HeaderBlock.Text = "Capsule #" + cageID;
-            humi = UserContainer.user.getCages()[cageID].Humidity;
+            humi = UserContainer.user.getCage(cageID).CageHumidity;
             HumidityBox.Text = "" + humi.CurrentHumidity;
         }
 
@@ -51,7 +51,7 @@ namespace PetCapsuleGUI.Pages
         {
             humi.CurrentHumidity = float.Parse(HumidityBox.Text);
             InfoBlock.Text = humi.info;
-            UserContainer.user.getCages()[cageID].Humidity.CurrentHumidity = humi.CurrentHumidity;
+            UserContainer.user.getCage(cageID).CageHumidity.CurrentHumidity = humi.CurrentHumidity;
         }
 
         private void PHumidity_Click(object sender, RoutedEventArgs e)

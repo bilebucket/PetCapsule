@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,12 +30,18 @@ namespace PetCapsuleGUI.Pages
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
+            getData();
             this.Frame.Navigate(typeof(RegPage2));
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        public void getData()
+        {
+            UserContainer.addUser(new User(FirstnameBox.Text, LastnameBox.Text, AddressBox.Text, LocationBox.Text));
         }
     }
 }

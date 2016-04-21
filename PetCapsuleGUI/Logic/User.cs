@@ -88,5 +88,10 @@ namespace PetCapsuleGUI.Logic
         {
             return cages;
         }
+
+        public Cage getCage(int index)
+        {
+            return cages[index];
+        }
     }
 }

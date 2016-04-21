@@ -12,13 +12,13 @@ namespace PetCapsuleGUI.Logic
         private Temperature temp;
         private Pet pet;
 
-        public Humidity Humidity
+        public Humidity CageHumidity
         {
             get { return humid; }
             set { humid = value; }
         }
 
-        public Temperature Temperature
+        public Temperature CageTemperature
         {
             get { return temp; }
             set { temp = value; }
@@ -32,8 +32,8 @@ namespace PetCapsuleGUI.Logic
 
         public Cage(Humidity h, Temperature t)
         {
-            Humidity = h;
-            Temperature = t;
+            CageHumidity = h;
+            CageTemperature = t;
         }
     }
 }
