@@ -46,8 +46,13 @@ namespace PetCapsuleGUI.Pages
                         c.writeUserData();
                         this.Frame.Navigate(typeof(MainPage));
                     }
+                    else { ErrorBlock.Text = "Please accept Terms and Conditions"; }
                 }
-            }
+                else
+                {
+                    ErrorBlock.Text = UserContainer.usernameAvailable(UsernameBox.Text) ? "Email is taken" : "Username is taken";
+                }
+            } else { ErrorBlock.Text = "Passwords do not match"; }
         }
 
         public void getData()

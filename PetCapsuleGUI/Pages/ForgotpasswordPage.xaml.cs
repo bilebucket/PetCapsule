@@ -52,8 +52,6 @@ namespace PetCapsuleGUI.Pages
             User user = UserContainer.getUserByEmailAndUsername(UsernameBox.Text, EmailBox.Text);
             if (user != null)
             {
-                if (UsernameBox.Text == user.Username && EmailBox.Text == user.Email)
-                {
                     string pass = RandomString(8);
                     NewPassword.Text = pass;
 
@@ -63,7 +61,9 @@ namespace PetCapsuleGUI.Pages
                     UserContainer.replaceUser(oldUser, newUser);
                     FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
                     c.writeUserData();
-                }
+                    ErrorBlock.Text = "";
+            } else {
+                ErrorBlock.Text = "Username or email is incorrect";
             }
         }
     }

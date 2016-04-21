@@ -10,6 +10,7 @@
     <Grid Background="#FFFCFAE1">
         <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
         <TextBlock x:Name="RegisterBlock" Text="Register" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 150 0 0" Foreground="#FFB9121B" FontWeight="Bold"/>
+        <TextBlock x:Name="ErrorBlock" Text="" FontSize="30" HorizontalAlignment="Center" Margin="0 250 0 0" Foreground="#FFB9121B" FontWeight="Bold"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 150 0 0">
             <TextBox x:Name="UsernameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Enter Username"/>
             <PasswordBox x:Name="PasswordBox" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" Margin="0 0 0 20" PlaceholderText="Enter password"/>

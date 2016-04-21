@@ -55,6 +55,9 @@ namespace PetCapsuleGUI.Pages
             if (UserContainer.loginCheck(u, p))
             {
                 this.Frame.Navigate(typeof(FrontPage));
+            } else
+            {
+                ErrorBlock.Text = "Username or password incorrect";
             }
             
         }
