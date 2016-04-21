@@ -9,12 +9,17 @@
 
     <Grid Background="#FFFCFAE1">
         <TextBlock x:Name="HeaderBlock" Text="PetCapsule" FontFamily="Trebuchet MS" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0" Foreground="#FFB9121B"/>
+        <TextBlock x:Name="PetBlock" Text="" FontFamily="Trebuchet MS" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 200 0 0" Foreground="#FFB9121B"/>
+        
         <StackPanel x:Name="FrontStack" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="VideoButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Video Call" Margin="0 20 0 0" FontSize="25" Click="VideoButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
-            
             <Button x:Name="TemperatureButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Temperature" Margin="0 20 0 0" FontSize="25" Click="TemperatureButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
             <Button x:Name="HumidityButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Humidity" Margin="0 20 0 0" FontSize="25" Click="HumidityButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
             <Button x:Name="StatusButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Status" Margin="0 20 0 0" FontSize="25" Click="StatusButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+            <Button x:Name="AddPetButton" HorizontalAlignment="Center" Height="50" Width="250" Content="Add pet" Margin="0 20 0 0" FontSize="25" Click="AddPetButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1" Visibility="Collapsed"/>
+            <TextBox x:Name="NameBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 20 0 20" PlaceholderText="Enter pet name" Visibility="Collapsed"/>
+            <TextBox x:Name="SpeciesBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Enter pet species" Visibility="Collapsed"/>
+            <TextBox x:Name="BreedBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="50" FontSize="20" TextAlignment="Left" Margin="0 0 0 20" PlaceholderText="Enter pet breed" Visibility="Collapsed"/>
         </StackPanel>
         <Button x:Name="BackButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Foreground="#FFFCFAE1" Background="#FFB9121B"/>
     </Grid>

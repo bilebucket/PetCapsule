@@ -15,6 +15,7 @@
                 
             </ListView>
             <Button x:Name="AddButton" HorizontalAlignment="Center" Height="50" Width="200" Content="Add" Margin="0 0 0 20" FontSize="25" Click="AddButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
+
         </StackPanel>
         <Button x:Name="BackButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="50" Width="150" Content="Back" Margin="20 0 0 20" FontSize="25" Click="BackButton_Click" Background="#FFB9121B" Foreground="#FFFCFAE1"/>
     </Grid>

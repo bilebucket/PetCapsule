@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetCapsuleGUI.Logic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace PetCapsuleGUI.Pages
         public CagePage()
         {
             this.InitializeComponent();
+     
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -36,6 +38,14 @@ namespace PetCapsuleGUI.Pages
             var parameters = e.Parameter;
             cageID = int.Parse(e.Parameter.ToString());
             HeaderBlock.Text = "Capsule #" + (cageID + 1);
+            if (UserContainer.user.getCage(cageID).Pet == null)
+            {
+                AddPetButton.Visibility = Visibility.Visible;
+                NameBox.Visibility = Visibility.Visible;
+                SpeciesBox.Visibility = Visibility.Visible;
+                BreedBox.Visibility = Visibility.Visible;
+            }
+            else PetBlock.Text = UserContainer.user.getCage(cageID).Pet.Name + ", " + UserContainer.user.getCage(cageID).Pet.Breed + ", " + UserContainer.user.getCage(cageID).Pet.Species;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -61,6 +71,18 @@ namespace PetCapsuleGUI.Pages
         private void StatusButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(StatusPage), cageID);
+        }
+
+        private void AddPetButton_Click(object sender, RoutedEventArgs e)
+        {
+            Pet p = new Pet(NameBox.Text, SpeciesBox.Text, BreedBox.Text);
+            UserContainer.user.getCage(cageID).Pet = p;
+            UserContainer.replaceUserInfo();
+            AddPetButton.Visibility = Visibility.Collapsed;
+            NameBox.Visibility = Visibility.Collapsed;
+            SpeciesBox.Visibility = Visibility.Collapsed;
+            BreedBox.Visibility = Visibility.Collapsed;
+            PetBlock.Text = p.Name + ", " + p.Breed + ", " + p.Species;
         }
     }
 }
