@@ -48,6 +48,7 @@ namespace PetCapsuleGUI.Pages
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            
             string u = UsernameBox.Text;
             string p = PasswordBox.Password;
 
@@ -55,7 +56,7 @@ namespace PetCapsuleGUI.Pages
             {
                 this.Frame.Navigate(typeof(FrontPage));
             }
-
+            
         }
 
         private void RegButton_Click(object sender, RoutedEventArgs e)

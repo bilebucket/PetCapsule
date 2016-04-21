@@ -51,30 +51,36 @@ namespace PetCapsuleGUI.Logic
         static public List<User> Users
         {
             get {
-                //users.Add(user);
                 return users;
             }
-            set { users = value; }
+            set {
+                if (value == null)
+                {
+                    users = new List<User>();
+                } users = value;
+            }
         }
 
         public static void addUser(User u)
         {
+            if (users == null)
+            {
+                users = new List<User>();
+            }
             users.Add(u);
             user = u;
         }
 
         public static bool loginCheck(string username, string password)
         {
-
             foreach(User u in users)
             {
                 if (u.Username == username && u.Password == password)
                 {
                     user = u;
                     return true;
-                }
+                }               
             }
-
             return false;
         }
     }

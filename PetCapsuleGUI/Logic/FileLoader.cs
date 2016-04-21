@@ -20,6 +20,12 @@ namespace PetCapsuleGUI.Logic
             set { users = value; }
         }
 
+        public FileLoader(string filename)
+        {
+            this.filename = filename;
+            Users = new List<User>();
+        }
+
         public FileLoader(string filename, List<User> users)
         {
             this.filename = filename;
@@ -36,6 +42,7 @@ namespace PetCapsuleGUI.Logic
                 try
                 {
                     users = JsonConvert.DeserializeObject<List<User>>(fileContents);
+                    System.Diagnostics.Debug.WriteLine("USERS: " + users);
                 }
                 catch (JsonReaderException e) { System.Diagnostics.Debug.WriteLine("UH OH\n" + e);  }
                 catch (JsonSerializationException e) { System.Diagnostics.Debug.WriteLine("UH OH\n" + e); }

@@ -57,9 +57,16 @@ namespace PetCapsuleGUI.Pages
             {
                 User oldUser = UserContainer.user;
 
+                string newPass = "" + PasswordNewBox.Password;
+                if (newPass != "")
+                {
+                    if(UserContainer.loginCheck(oldUser.Username, oldUser.Password))
+                    {
+                        oldUser.Password = newPass;
+                    }
+                }
 
-
-                User newUser = new User(UserContainer.user.Username, UserContainer.user.Password, EmailBox.Text, NameBox.Text, LastnameBox.Text, AddressBox.Text, CityBox.Text);
+                User newUser = new User(oldUser.Username, oldUser.Password, EmailBox.Text, NameBox.Text, LastnameBox.Text, AddressBox.Text, CityBox.Text);
                 UserContainer.replaceUser(oldUser, newUser);
                 FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
                 c.writeUserData();
