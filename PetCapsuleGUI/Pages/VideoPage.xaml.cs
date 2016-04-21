@@ -23,14 +23,24 @@ namespace PetCapsuleGUI.Pages
     /// </summary>
     public sealed partial class VideoPage : Page
     {
+        private int cageID;
+
         public VideoPage()
         {
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            var parameters = e.Parameter;
+            cageID = int.Parse(e.Parameter.ToString());
+        }
+
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(CagePage));
+            this.Frame.Navigate(typeof(CagePage), cageID);
         }
     }
 }
