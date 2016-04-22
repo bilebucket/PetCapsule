@@ -13,7 +13,6 @@ namespace PetCapsuleGUI.Logic
         private string filename;
         private List<User> users = new List<User>();
        
-
         public List<User> Users
         {
             get { return users; }
@@ -30,9 +29,12 @@ namespace PetCapsuleGUI.Logic
         {
             this.filename = filename;
             Users = users;
-            // System.Diagnostics.Debug.WriteLine(Path.GetFullPath(filename));
         }
 
+
+        /*
+        Users -listan deserialisointi tiedostosta.
+            */
         public void readUserData()
         {
             try
@@ -42,16 +44,16 @@ namespace PetCapsuleGUI.Logic
                 try
                 {
                     users = JsonConvert.DeserializeObject<List<User>>(fileContents);
-                    System.Diagnostics.Debug.WriteLine("USERS: " + users);
                 }
                 catch (JsonReaderException e) { System.Diagnostics.Debug.WriteLine("UH OH\n" + e);  }
                 catch (JsonSerializationException e) { System.Diagnostics.Debug.WriteLine("UH OH\n" + e); }
-
-
             }
             catch (FileNotFoundException e) { System.Diagnostics.Debug.WriteLine("UH OH\n" + e); }
         }
 
+        /*
+        Users -listan serialisointi tiedostoon.
+            */
         public void writeUserData()
         {
             string output = JsonConvert.SerializeObject(users, Formatting.Indented);

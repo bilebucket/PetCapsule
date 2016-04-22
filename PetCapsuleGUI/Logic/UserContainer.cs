@@ -85,6 +85,7 @@ namespace PetCapsuleGUI.Logic
             return false;
         }
 
+        //Päivitetään User -olion tiedot ja tallennetaan muutokset tiedostoon
         public static void replaceUserInfo()
         {
             User oldUser = UserContainer.user;

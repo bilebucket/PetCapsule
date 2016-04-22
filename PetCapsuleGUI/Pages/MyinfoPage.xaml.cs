@@ -67,7 +67,7 @@ namespace PetCapsuleGUI.Pages
                 }
 
                 User newUser = new User(oldUser.Username, oldUser.Password, EmailBox.Text, NameBox.Text, LastnameBox.Text, AddressBox.Text, CityBox.Text);
-
+                newUser.Cages = oldUser.Cages;
                 UserContainer.replaceUser(oldUser, newUser);
                 FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
                 c.writeUserData();
