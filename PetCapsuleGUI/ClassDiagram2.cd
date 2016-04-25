@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="PetCapsuleGUI.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.Cage" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAACQAAAAgAABAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Cage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.FileLoader">
+    <Position X="13" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAACBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Logic\FileLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.Humidity" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAIAAAAAAAAAAACAAAAAQAAAEAAAAAA=</HashCode>
+      <FileName>Logic\Humidity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.Pet" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAEAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAIABAA=</HashCode>
+      <FileName>Logic\Pet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.Temperature" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAQAQAAAAAAQA=</HashCode>
+      <FileName>Logic\Temperature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.User" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAGhAAAAoAQSACAEEAAIAAAACAAAAAgAAAEA=</HashCode>
+      <FileName>Logic\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Logic.UserContainer">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgBACAAAACAgAAAAAAAABAAAAEAAAAAAAAAIAAAAwA=</HashCode>
+      <FileName>Logic\UserContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.CagePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAAAAAAAAAAAAAAAQAIAAAAQAABAQAACAAAAQ=</HashCode>
+      <FileName>Pages\CagePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.CapsulesPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAACCAAAAAACAAAIA=</HashCode>
+      <FileName>Pages\CapsulesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.ForgotpasswordPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAEA=</HashCode>
+      <FileName>Pages\ForgotpasswordPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.FrontPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAEgAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\FrontPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.HumidityPage" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAACAAAAAEAAAAAAAAQAAAAAAAAAAAAAACAQAAA=</HashCode>
+      <FileName>Pages\HumidityPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.MainPage" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAIAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Pages\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.MyinfoPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAiAAAAA=</HashCode>
+      <FileName>Pages\MyinfoPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.RegPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Pages\RegPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.RegPage2" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Pages\RegPage2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.StatusPage" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAICAAAAAAAAAAAAAAAQCIAAAAAAAAAAAAiAAQQQ=</HashCode>
+      <FileName>Pages\StatusPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.TemperaturePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAAAAAAAAAAAAAAAIAQAAAAAAACAAAAAACBAAAA=</HashCode>
+      <FileName>Pages\TemperaturePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PetCapsuleGUI.Pages.VideoPage" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Pages\VideoPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Calibri" Size="8.25" />
+</ClassDiagram>

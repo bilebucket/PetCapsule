@@ -99,7 +99,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\users.json" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
