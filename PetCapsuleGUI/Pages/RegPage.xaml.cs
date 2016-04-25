@@ -28,8 +28,14 @@ namespace PetCapsuleGUI.Pages
             this.InitializeComponent();
         }
 
+        private bool checkInput()
+        {
+            return (FirstnameBox.Text != "" && LastnameBox.Text != "" && AddressBox.Text != "" && LocationBox.Text != "");
+        }
+
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!checkInput()) return;
             FileLoader c = new FileLoader(@"assets/users.json");
             getData();
             c.writeUserData();

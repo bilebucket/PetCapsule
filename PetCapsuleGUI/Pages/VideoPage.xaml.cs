@@ -36,6 +36,16 @@ namespace PetCapsuleGUI.Pages
 
             var parameters = e.Parameter;
             cageID = int.Parse(e.Parameter.ToString());
+            try
+            {
+                var fileInfo = new FileInfo(@"Assets/cat.mp4");
+                var uri = new Uri(fileInfo.FullName);
+                System.Diagnostics.Debug.WriteLine(uri);
+                kissaVideo.Source = uri;
+            } catch(Exception error)
+            {
+                System.Diagnostics.Debug.WriteLine(error);
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

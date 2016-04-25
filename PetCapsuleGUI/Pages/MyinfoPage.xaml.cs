@@ -42,6 +42,11 @@ namespace PetCapsuleGUI.Pages
             this.Frame.Navigate(typeof(FrontPage));
         }
 
+        private bool checkInput()
+        {
+            return (NameBox.Text != "" && LastnameBox.Text != "" && EmailBox.Text != "" && AddressBox.Text != "" && CityBox.Text != "");
+        }
+
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
            if (!edit)
@@ -53,7 +58,7 @@ namespace PetCapsuleGUI.Pages
                 CityBox.IsReadOnly = false;
                 edit = true;
                 EditButton.Content = "Save";
-            } else
+            } else if(checkInput())
             {
                 User oldUser = UserContainer.user;
 

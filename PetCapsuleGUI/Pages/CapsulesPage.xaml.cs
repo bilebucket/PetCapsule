@@ -47,7 +47,7 @@ namespace PetCapsuleGUI.Pages
                 b.Background = new SolidColorBrush(Color.FromArgb(255, 185, 18, 27));
                 b.Foreground = new SolidColorBrush(Color.FromArgb(255, 252, 250, 225));
                 b.Click += new RoutedEventHandler(b_Click);
-                //b.Margin = ;
+                b.Margin = new Thickness(0, 0, 0, 10);
                 btns.Add(b);
                 count++;
             }

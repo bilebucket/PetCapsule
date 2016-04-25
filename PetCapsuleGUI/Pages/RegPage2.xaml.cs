@@ -33,8 +33,15 @@ namespace PetCapsuleGUI.Pages
             this.Frame.Navigate(typeof(RegPage));
         }
 
+
+        private bool checkInput()
+        {
+            return (UsernameBox.Text != "" && PasswordBox.Password != "" && EmailBox.Text != "");
+        }
+
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!checkInput()) return;
             if (PasswordBox.Password == Password2Box.Password)
             {
                 if (UserContainer.usernameAvailable(UsernameBox.Text) && UserContainer.emailAvailable(EmailBox.Text))

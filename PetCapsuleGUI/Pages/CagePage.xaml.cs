@@ -73,8 +73,15 @@ namespace PetCapsuleGUI.Pages
             this.Frame.Navigate(typeof(StatusPage), cageID);
         }
 
+        private bool checkInput()
+        {
+            return (NameBox.Text != "" && SpeciesBox.Text != "" && BreedBox.Text != "");
+        }
+
         private void AddPetButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!checkInput()) return;
+
             Pet p = new Pet(NameBox.Text, SpeciesBox.Text, BreedBox.Text);
             UserContainer.user.getCage(cageID).Pet = p;
             UserContainer.replaceUserInfo();
