@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetCapsuleGUI.Logic
 {
+
     class UserContainer
     {
         private static List<User> users = new List<User>();
