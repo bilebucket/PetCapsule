@@ -42,6 +42,7 @@ namespace PetCapsuleGUI.Pages
             this.Frame.Navigate(typeof(FrontPage));
         }
 
+        /* Tarkistetaan, että kaikki kentät on täytetty */
         private bool checkInput()
         {
             return (NameBox.Text != "" && LastnameBox.Text != "" && EmailBox.Text != "" && AddressBox.Text != "" && CityBox.Text != "");
@@ -51,6 +52,7 @@ namespace PetCapsuleGUI.Pages
         {
            if (!edit)
             {
+                // asetetaan kentät muokattavaksi
                 NameBox.IsReadOnly = false;
                 LastnameBox.IsReadOnly = false;
                 EmailBox.IsReadOnly = false;
@@ -58,8 +60,11 @@ namespace PetCapsuleGUI.Pages
                 CityBox.IsReadOnly = false;
                 edit = true;
                 EditButton.Content = "Save";
-            } else if(checkInput())
+            }
+            else if(checkInput())
             {
+
+                // Tallennetaan muutokset
                 User oldUser = UserContainer.user;
 
                 string newPass = "" + PasswordNewBox.Password;

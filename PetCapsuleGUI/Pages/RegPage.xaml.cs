@@ -28,6 +28,7 @@ namespace PetCapsuleGUI.Pages
             this.InitializeComponent();
         }
 
+        /* Tarkistetaan, että kaikki kentät on täytetty */
         private bool checkInput()
         {
             return (FirstnameBox.Text != "" && LastnameBox.Text != "" && AddressBox.Text != "" && LocationBox.Text != "");

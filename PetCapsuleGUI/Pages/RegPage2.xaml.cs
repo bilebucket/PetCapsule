@@ -33,7 +33,7 @@ namespace PetCapsuleGUI.Pages
             this.Frame.Navigate(typeof(RegPage));
         }
 
-
+        /* Tarkistetaan, että kaikki kentät on täytetty */
         private bool checkInput()
         {
             return (UsernameBox.Text != "" && PasswordBox.Password != "" && EmailBox.Text != "");
@@ -42,24 +42,31 @@ namespace PetCapsuleGUI.Pages
         private void FinishButton_Click(object sender, RoutedEventArgs e)
         {
             if (!checkInput()) return;
-            if (PasswordBox.Password == Password2Box.Password)
+            if (PasswordBox.Password == Password2Box.Password) // tarkistetaan, että salasanat täsmäävät
             {
-                if (UserContainer.usernameAvailable(UsernameBox.Text) && UserContainer.emailAvailable(EmailBox.Text))
+                if (UserContainer.usernameAvailable(UsernameBox.Text) && UserContainer.emailAvailable(EmailBox.Text)) // tarkistetaan, ettei käyttäjätunnus tai sähköposti ole jo käytössä
                 {                    
-                    if ((bool)TOCBox.IsChecked)
+                    if ((bool)TOCBox.IsChecked) // Tarkistetaan, että käyttöehdot (CheckBox) on hyväksytty
                     {
                         FileLoader c = new FileLoader(@"assets/users.json", UserContainer.Users);
                         getData();
                         c.writeUserData();
                         this.Frame.Navigate(typeof(MainPage));
                     }
-                    else { ErrorBlock.Text = "Please accept Terms and Conditions"; }
+                    else {
+                        // annetaan virheilmoitus
+                        ErrorBlock.Text = "Please accept Terms and Conditions";
+                    }
                 }
                 else
                 {
+                    // annetaan virheilmoitus
                     ErrorBlock.Text = UserContainer.usernameAvailable(UsernameBox.Text) ? "Email is taken" : "Username is taken";
                 }
-            } else { ErrorBlock.Text = "Passwords do not match"; }
+            } else {
+                // annetaan virheilmoitus
+                ErrorBlock.Text = "Passwords do not match";
+            }
         }
 
         public void getData()

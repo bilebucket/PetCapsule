@@ -73,6 +73,7 @@ namespace PetCapsuleGUI.Pages
             this.Frame.Navigate(typeof(StatusPage), cageID);
         }
 
+        /* Tarkistetaan, että kaikki kentät on täytetty */
         private bool checkInput()
         {
             return (NameBox.Text != "" && SpeciesBox.Text != "" && BreedBox.Text != "");

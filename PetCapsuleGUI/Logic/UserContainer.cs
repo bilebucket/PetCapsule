@@ -31,6 +31,10 @@ namespace PetCapsuleGUI.Logic
         {
         }
 
+
+        /* Haetaan User-luokan olio sähköpostin ja käyttäjätunnuksen perusteella.
+        Käytetään salasanaa palauttaessa.
+            */
         public static User getUserByEmailAndUsername(string username, string email)
         {
             foreach (User u in users)
@@ -43,6 +47,7 @@ namespace PetCapsuleGUI.Logic
             return null;
         }
 
+        /* Päivitetään käyttäjän tiedot */
         static public void replaceUser(User oldUser, User newUser)
         {
             users.Remove(oldUser);
@@ -73,6 +78,9 @@ namespace PetCapsuleGUI.Logic
             user = u;
         }
 
+        /* Kirjautumisen yhteydessä tehtävä tarkistus:
+           Tarkistetaan, että käyttäjätunnus on olemassa ja että salasana on oikea.
+            */
         public static bool loginCheck(string username, string password)
         {
             foreach(User u in users)
@@ -86,7 +94,7 @@ namespace PetCapsuleGUI.Logic
             return false;
         }
 
-        //Päivitetään User -olion tiedot ja tallennetaan muutokset tiedostoon
+        /* Päivitetään User -olion tiedot ja tallennetaan muutokset tiedostoon */
         public static void replaceUserInfo()
         {
             User oldUser = UserContainer.user;
@@ -99,6 +107,7 @@ namespace PetCapsuleGUI.Logic
             c.writeUserData();
         }
 
+        /* Tarkistetaan, onko käyttäjätunnus käytettävissä */
         public static bool usernameAvailable(string username)
         {
             foreach(User u in users)
@@ -107,7 +116,7 @@ namespace PetCapsuleGUI.Logic
             }
             return true;
         }
-
+        /* Tarkistetaan, onko sähköposti käytettävissä */
         public static bool emailAvailable(string email)
         {   
             foreach(User u in users)
